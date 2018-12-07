@@ -1,0 +1,71 @@
+<head>
+
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/sign.css">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <% include ./partials/header.ejs %>
+    <div class="text-center" style="padding:50px 0">
+        <div class="logo">login</div>
+        <div class="login-form-1">
+            <form id="login-form" class="text-left">
+                <div class="login-form-main-message"></div>
+                <div class="main-login-form">
+                    <div class="login-group">
+                        <div class="form-group">
+                            <label for="lg_username" class="sr-only">Username</label>
+                            <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="lg_password" class="sr-only">Password</label>
+                            <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
+                        </div>
+                        <div class="form-group login-group-checkbox">
+                            <input type="checkbox" id="lg_remember" name="lg_remember">
+                            <label for="lg_remember">remember</label>
+                        </div>
+                    </div>
+                 <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+                </div>
+                <div class="etc-login-form">
+                    <p>forgot your password? <a data-toggle="modal" data-target="#addforget" href="#">click here</a></p>
+                    <p>new user? <a data-toggle="modal" data-target="#addregister" href="#">create new account</a></p>
+                </div>
+
+                <div class="modal fade" id="addforget" tabindex="-1" role="dialog" aria-labelledby="addforget"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <% include ./users/forgetpassword.ejs %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="addregister" tabindex="-1" role="dialog" aria-labelledby="addregister"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <% include ./users/register.ejs %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </form>
+            <a href="/albums/index"> Albums</a>
+        </div>
+    </div>
+    </div>
+    <script src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>
+    <script src="https://bootswatch.com/_assets/js/custom.js"></script>
+    <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://bootswatch.com/_vendor/popper.js/dist/umd/popper.min.js"></script>
+</body>
+<% include ./partials/footer.ejs %>

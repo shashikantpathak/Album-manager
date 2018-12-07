@@ -1,0 +1,68 @@
+<head>
+    <link rel="stylesheet" href="../css/songslist.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <% include ../partials/header.ejs %>
+    <div class="container" style="margin-top:8px;">
+
+        <div class="row">
+
+            <div class="col-sm-2">
+                <div class="text-left" style="font-size:20px;font-family: cursive; margin-bottom:10px">User-Name</div>
+                <img src="https://via.placeholder.com/100">
+                <div>
+                    <form action="/genres-result" method="post">
+                        <ul>
+                            <li class="genre-style" style="margin-top:20px">Mood You Songs
+                                <ul>
+                                    <a href="#">
+                                        <li>Travel</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>Party</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>Chill</li>
+                                    </a>
+                                </ul>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-sm-7">
+                <div class="text-center" style="font-size:20px;font-family: cursive; margin-bottom:10px">Manage Your
+                    Album</div>
+                <form action="/seach-result" method="post">
+                    <div class="form-group ad-30 ">
+                        <div class="input-group search-style ">
+                            <input class="form-control new-search-bar" name="search" id="search" placeholder="Search your fav song/album"
+                                type="text">
+                            <span class="input-group-btn col-lg-3">
+                                <button class="btn input-btn" type="" id="search-form">Search</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+                <% include ../partials/showalbum.ejs %>
+            </div>
+            <div class="col-sm-3" style="margin-top:40px">
+                <% include ../partials/addmodal.ejs %>
+                <% include ../partials/songlist.ejs %>
+            </div>
+        </div>
+    </div>
+    <script src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>
+    <script src="https://bootswatch.com/_assets/js/custom.js"></script>
+    <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://bootswatch.com/_vendor/popper.js/dist/umd/popper.min.js"></script>
+</body>
+
+
+<% include ../partials/footer.ejs %>

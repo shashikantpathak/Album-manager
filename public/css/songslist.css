@@ -1,0 +1,35 @@
+
+ 
+ul {
+  list-style-type: none;
+  margin-top:0px ;
+  padding: 0;
+}
+ 
+.span{
+   
+    color:aliceblue
+}
+ 
+.nav-tabs .nav-link.active, .nav-pills .nav-link.active {
+    background-color: #282828!important;
+}
+ 
+.fa{
+    margin-right:5px;
+    
+}
+
+ul ul {
+  
+    top: 1em;
+    left: 0;
+    display: none;
+    text-decoration: none
+   
+}
+
+ul > li:hover ul {
+    display: block;
+    text-decoration: none
+}
