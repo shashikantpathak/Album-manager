@@ -17,7 +17,7 @@ const serviceAccount = require("./public/pb/serviceAccountKey.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://album-manage.firebaseio.com"
+  databaseURL: ""
 });
 
 const routers=require('./routes/index');
