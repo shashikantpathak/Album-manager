@@ -12,16 +12,24 @@
     <div class="container" style="margin-top:8px;">
         <div class="row">
             <div class="col-sm-3" style="margin-top:20px">
-                <div class="text-left" style="font-size:20px;font-family: cursive; margin-bottom:10px">Album-Name</div>
-                <img src="https://via.placeholder.com/150" style="width:80%">
-                <a href="/albums/details"> <button class="btn btn-secondary" style="margin-top:30px;width:80%">Go Back
+               
+                    <div class="text-left" style="font-size:20px;font-family: cursive; margin-bottom:10px">
+                        <%= album.albumname %>
+                    </div>
+                   
+                
+                <img  style="width:80%; height:35%"src="/images/uploads/<%= album.cover %>">
+                <a href="/albums/details/<%= id %>"> <button class="btn btn-secondary" style="margin-top:30px;width:80%">Go Back
                     </button></a>
+                   
             </div>
+           
 
 
             <div class="col-sm-7" style="margin-top:20px">
                     <div class="text-center" style="font-size:20px;font-family: cursive; margin-bottom:10px">Search You Music
                             </div>
+                            
                     <form action="/seach-result" method="post" style="width:114%;">
                         <div class="form-group ad-40 ">
                             <div class="input-group search-style ">
@@ -34,126 +42,72 @@
                         </div>
                     </form>
                 <ul class="nav nav-tabs">
-                    <li class="nav-item" style="width:50%">
+                    <li class="nav-item" style="width:100%">
                         <a class="nav-link active show" data-toggle="tab" href="#songs">Songs</a>
                     </li>
-                    <li class="nav-item" style="width:50%">
+                    <!-- <li class="nav-item" style="width:50%">
                         <a class="nav-link" data-toggle="tab" href="#alubum">Albums</a>
-                    </li>
+                    </li> -->
 
 
 
                 </ul>
                 <div id="myTabContent" class="tab-content">
-                    <div class="tab-pane fade" id="alubum" style="margin-top:20px">
+                    <!-- <div class="tab-pane fade" id="alubum" style="margin-top:20px">
                         <div class="list-group float-right" style="width:50%">
                           
                             <span class="list-group-item list-group-item-action">
-                                    <span> Alubm </span>
-                                    <span class="float-right">
-                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                    </span>
+                                <span> Alubm </span>
+                                <span class="float-right">
+                                    <i class="fa fa-play"></i>
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
                                 </span>
-                                <span class="list-group-item list-group-item-action">
-                                        <span> Alubm </span>
-                                        <span class="float-right">
-                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                        </span>
-                                    </span>
-                                    <span class="list-group-item list-group-item-action">
-                                            <span> Alubm </span>
-                                            <span class="float-right">
-                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                            </span>
-                                        </span>
-                                        <span class="list-group-item list-group-item-action">
-                                                <span> Alubm </span>
-                                                <span class="float-right">
-                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                                </span>
-                                            </span>
-                                            <span class="list-group-item list-group-item-action">
-                                                    <span> Alubm </span>
-                                                    <span class="float-right">
-                                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                                    </span>
-                                                </span>
-                                                <span class="list-group-item list-group-item-action">
-                                                        <span> Alubm </span>
-                                                        <span class="float-right">
-                                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                                        </span>
-                                                    </span>
-                            <div class="float-right" style="margin-top:10px">
-                                    <ul class="pagination pagination-sm">
-                                      <li class="page-item disabled">
-                                        <a class="page-link" href="#">&laquo;</a>
-                                      </li>
-                                      <li class="page-item">
-                                        <a class="page-link" href="#">1</a>
-                                      </li>
-                                      <li class="page-item">
-                                            <a class="page-link" href="#">2</a>
-                                          </li>
-                                          <li class="page-item">
-                                                <a class="page-link" href="#">3</a>
-                                              </li>
-                                    
-                                      <li class="page-item">
-                                        <a class="page-link" href="#">&raquo;</a>
-                                      </li>
-                                    </ul>
-                                  </div>
+                            </span>               
+                            
                         </div>
-                    </div>
+                    </div> -->
                     <div class="tab-pane fade active show" id="songs" style="margin-top:20px">
-                        <div class="list-group float-left" style="width:50%">
+                        <div class="list-group float-left" style="width:100%">
                          
                             <span class="list-group-item list-group-item-action">
                                 <span> <i class="fa fa-music"></i> Cras justo </span>
                                 <span class="float-right">
-                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                    <i class="fa fa-play"></i>
                                     <i class="fa fa-trash-o" aria-hidden="true"></i>
                                 </span>
                             </span>
                             <span class="list-group-item list-group-item-action">
                                 <span> <i class="fa fa-music"></i> Cras justo </span>
                                 <span class="float-right">
-                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                    <i class="fa fa-play"></i>
                                     <i class="fa fa-trash-o" aria-hidden="true"></i>
                                 </span>
                             </span>
                             <span class="list-group-item list-group-item-action">
                                     <span> <i class="fa fa-music"></i> Cras justo </span>
                                     <span class="float-right">
-                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                        <i class="fa fa-play"></i>
                                         <i class="fa fa-trash-o" aria-hidden="true"></i>
                                     </span>
                                 </span>
                                 <span class="list-group-item list-group-item-action">
                                         <span> <i class="fa fa-music"></i> Cras justo </span>
                                         <span class="float-right">
-                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            <i class="fa fa-play"></i>
                                             <i class="fa fa-trash-o" aria-hidden="true"></i>
                                         </span>
                                     </span>
                                     <span class="list-group-item list-group-item-action">
                                         <span> <i class="fa fa-music"></i> Cras justo </span>
                                         <span class="float-right">
-                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            <i class="fa fa-play"></i>
                                             <i class="fa fa-trash-o" aria-hidden="true"></i>
                                         </span>
                                     </span>
                                     <span class="list-group-item list-group-item-action">
                                             <span> <i class="fa fa-music"></i> Cras justo </span>
                                             <span class="float-right">
-                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                <i class="fa fa-play"></i>
                                                 <i class="fa fa-trash-o" aria-hidden="true"></i>
                                             </span>
                                         </span>
@@ -183,6 +137,38 @@
 
                 </div>
             </div>
+            <div class="col-sm-2">
+                    <div class="float-right">
+                <i class="fa fa-pencil-square-o btn" data-toggle="modal" data-target="#addsongs" aria-hidden="true">Edit</i>
+                <i  data-id="<%= id %>" class="fa fa-trash-o btn delete-album" aria-hidden="true">Delete</i>
+               
+                </div>
+            </div>
+            <div class="modal fade" id="addsongs" tabindex="-1" role="dialog" aria-labelledby="addsongs"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body clas2">
+                        <form method="post" action="/albums/edit/<%= id %>">
+                            <fieldset>
+                                <legend>Update AlbumName</legend>
+
+                                <div class="form-group" style="display:flex">
+
+                                    <input placeholder="album-name" name="albumname" style="width:100%" value="<%=album.albumname %>"type="text" class="form-control"
+                                        id="exampleInputText" aria-describedby="textHelp">
+                                </div>
+                                <button type="submit" class="btn btn-secondary"  style="margin-top:10px;background-color:white !important;color:black">Submit</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal" style="margin-top:10px;background-color:white !important;color:black">Close</button>
+
+                            </fieldset>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
         </div>
     </div>
 

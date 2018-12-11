@@ -8,6 +8,7 @@
 
 <body>
     <% include ../partials/header.ejs %>
+   
     <div class="container" style="margin-top:8px;">
 
         <div class="row">
@@ -20,15 +21,11 @@
                         <ul>
                             <li class="genre-style" style="margin-top:20px">Mood You Songs
                                 <ul>
-                                    <a href="#">
-                                        <li>Travel</li>
+                                        <% for(var i=0;i<genres.length;i++){%>
+                                    <a href="#" style="color:white">
+                                        <li><%=genres[i].genre%></li>
                                     </a>
-                                    <a href="#">
-                                        <li>Party</li>
-                                    </a>
-                                    <a href="#">
-                                        <li>Chill</li>
-                                    </a>
+                                    <%}%>
                                 </ul>
                             </li>
                         </ul>

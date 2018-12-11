@@ -11,20 +11,21 @@
         <div class="container" style="margin-top:8px;">
             <div class="row">
                 <div class="col-sm-3">
-                    <div class="text-left" style="font-size:20px;font-family: cursive; margin-bottom:10px">Album-Name</div>
-                    <img src="https://via.placeholder.com/200">
-                  <a href="/albums/edit"> <button class="btn btn-secondary" style="margin-top:30px;width:200px">Edit Your Collections
+                    <div class="float-left" style="font-size:20px;font-family: cursive; margin-bottom:10px"><%= album.albumname %></div>
+                    <img  style="width:200px;height:200px"src="/images/uploads/<%= album.cover %>">
+                  <a href="/albums/edit/<%= id%>"> <button class="btn btn-secondary" style="margin-top:30px;width:200px">Edit Your Collections
                     </button></a>
+                    
                   
     
                 </div>
-    
-                <div class="col-sm-9">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-6">
                     <div class="text-center" style="font-size:20px;font-family: cursive; margin-bottom:10px">Songs Collection
-                          <a href="/"><i class="fa fa-arrow-left float-right" style="color:white" aria-hidden="true"></i></a> 
+                          <a href="/albums/index"><i class="fa fa-arrow-left float-right" style="color:white" aria-hidden="true"></i></a> 
                           </div> 
                     
-                        <div class="list-group">
+                        <div class=" clas1">
                                 <span class="list-group-item list-group-item-action">
                                     <span> <i class="fa fa-music"></i> Cras justo </span>
                                     <span class="float-right">
